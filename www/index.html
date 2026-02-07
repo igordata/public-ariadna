@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariadna — Blockchain Forensics for Law Enforcement</title>
+    <meta name="description" content="Blockchain forensics and asset-tracing tools for police and law enforcement">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Avenir Next', 'Avenir', -apple-system, 'Segoe UI', sans-serif;
+            background: #FAF7F2;
+            color: #3A3A3A;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px 60px;
+        }
+
+        .hero img {
+            width: 280px;
+            max-width: 100%;
+            margin-bottom: 32px;
+        }
+
+        .tagline {
+            font-size: 20px;
+            font-weight: 400;
+            color: #6B6B6B;
+            text-align: center;
+            max-width: 520px;
+            line-height: 1.5;
+        }
+
+        .hero .vision-text {
+            max-width: 640px;
+            margin-top: 48px;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #3A3A3A;
+            text-align: center;
+        }
+
+        .team {
+            padding: 40px 24px 60px;
+            text-align: center;
+        }
+
+        .team h2 {
+            font-size: 28px;
+            font-weight: 500;
+            color: #C63A33;
+            margin-bottom: 40px;
+        }
+
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 200px;
+        }
+
+        .member img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            border: 3px solid #C63A33;
+        }
+
+        .member .placeholder-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin-bottom: 16px;
+            border: 3px solid #C63A33;
+            background: #D5D0CA;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #FAF7F2;
+            font-weight: 300;
+        }
+
+        .member-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #3A3A3A;
+            margin-bottom: 4px;
+        }
+
+        .member-role {
+            font-size: 14px;
+            font-weight: 400;
+            color: #8A8A8A;
+        }
+
+        .positions {
+            padding: 40px 24px 60px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .positions h2 {
+            font-size: 28px;
+            font-weight: 500;
+            color: #C63A33;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .position {
+            margin-bottom: 48px;
+        }
+
+        .position:last-child {
+            margin-bottom: 0;
+        }
+
+        .position h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #3A3A3A;
+            margin-bottom: 16px;
+        }
+
+        .position p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4A4A4A;
+            margin-bottom: 12px;
+        }
+
+        .position ul {
+            list-style: disc;
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+
+        .position li {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4A4A4A;
+            margin-bottom: 6px;
+        }
+
+        .bottom {
+            margin-top: auto;
+            text-align: center;
+            padding: 60px 24px 20px;
+        }
+
+        .bottom-location {
+            font-size: 15px;
+            color: #8A8A8A;
+            margin-bottom: 12px;
+        }
+
+        .bottom-hiring {
+            font-size: 18px;
+            font-weight: 600;
+            color: #C63A33;
+            margin-bottom: 8px;
+        }
+
+        .bottom-contact {
+            font-size: 15px;
+            color: #6B6B6B;
+        }
+
+        .bottom-contact a {
+            color: #C63A33;
+            text-decoration: none;
+        }
+
+        .bottom-contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 13px;
+            color: #AAAAAA;
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 20px 40px;
+            }
+
+            .hero img {
+                width: 220px;
+            }
+
+            .tagline {
+                font-size: 17px;
+            }
+
+            .team-grid {
+                gap: 32px;
+            }
+
+            .member img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <img src="/media/Ariadna logo 3.svg" alt="Ariadna">
+        <p class="tagline">Blockchain forensics and asset-tracing tools for police and law enforcement</p>
+        <p class="vision-text">Our goal is to fuse all major blockchains into a massive single graph and cluster it without compromise. We'll need terabytes of RAM, tens of terabytes of SSD and minds eager to bend this power to their will.</p>
+    </section>
+
+    <section class="team">
+        <h2>Team</h2>
+        <div class="team-grid">
+            <div class="member">
+                <img src="/media/1.jpeg" alt="Igor Data">
+                <div class="member-name">Igor Data</div>
+                <div class="member-role">Chief Executive Officer</div>
+            </div>
+            <div class="member">
+                <img src="/media/2.png" alt="Aurélien Vuilleumier">
+                <div class="member-name">Aurélien Vuilleumier</div>
+                <div class="member-role">Head of Investigations</div>
+            </div>
+            <div class="member">
+                <img src="/media/3.jpeg" alt="Luca Rizzello">
+                <div class="member-name">Luca Rizzello</div>
+                <div class="member-role">Head of Data Science</div>
+            </div>
+            <div class="member">
+                <div class="placeholder-avatar">?</div>
+                <div class="member-name">TBA</div>
+                <div class="member-role">Graph Architect</div>
+            </div>
+            <div class="member">
+                <div class="placeholder-avatar">?</div>
+                <div class="member-name">TBA</div>
+                <div class="member-role">Head of Data Engineering</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="positions">
+        <h2>Open Positions</h2>
+
+        <div class="position">
+            <h3>Backend Engineer (Data, Golang, Rust, Java, C#, C++, Python)</h3>
+<p>We're looking for an engineer to run the blockchain nodes and extract complete data from them.</p>
+            <ul>
+                <li>You extract blockchain data from nodes: sometimes APIs work, sometimes you need to trace specific transactions or even patch node code.</li>
+                <li>You build an ingestion pipeline from scratch that stays ahead of the incoming blockchain data.</li>
+                <li>You observe what breaks it and experiment with ways to keep it stable.</li>
+                <li>You work closely with other engineers on the team: you provide them with normalized blockchain data and they build clustering logic.</li>
+            </ul>
+            <p>Our goal is to get data from ALL blockchains. We're talking about dozens of terabytes of data and it grows non-stop.</p>
+            <p>You own blockchain nodes infrastructure and perform low-latency data extraction. Later on, you take technical ownership of the ingestion layer and build the team around it.</p>
+        </div>
+
+        <div class="position">
+            <h3>Rust Backend Engineer / Graph Systems Cofounder</h3>
+<p>We're looking for a Rust Backend Engineer and performance freak to build a CPU-first RAM-intense graph analytic engine capable of operating on terabytes of data.</p>
+            <p>You build the core system where it all comes together into a single massive graph. You work with other engineers who provide you with the normalized data and clustering logic.</p>
+            <ul>
+                <li>You create the in-memory structure and an API to extract subgraphs. No query language. Simple and damn fast.</li>
+                <li>One machine to hold it all: terabytes of RAM and tens of terabytes of SSD.</li>
+                <li>The data volume is huge and grows continuously.</li>
+                <li>Clustering and heuristics run directly on the parts of the graph affected by new data, fast enough to keep up with continuous inflow.</li>
+            </ul>
+            <p>You own performance, data structures, algorithmic execution over the graph, and benchmarking. Early on, the focus is on building and proving the system itself. Later, this role becomes a technical lead position with freedom to hire.</p>
+        </div>
+    </section>
+
+    <section class="bottom">
+        <div class="bottom-location">Based in Geneva, Switzerland</div>
+        <div class="bottom-hiring">We're hiring</div>
+        <div class="bottom-contact" id="contact"></div>
+        <div class="bottom-contact" style="margin-top: 8px;"><a href="https://www.linkedin.com/company/ariadna-swiss/" target="_blank" rel="noopener">LinkedIn</a></div>
+    </section>
+
+    <footer>
+        &copy; 2026 Ariadna
+    </footer>
+    <script>
+        setTimeout(function() {
+            var u = 'hello'; var d = 'ariadna.ch';
+            var el = document.getElementById('contact');
+            var a = document.createElement('a');
+            a.href = 'mailto:' + u + '@' + d;
+            a.textContent = u + '@' + d;
+            el.appendChild(a);
+        }, 5000);
+    </script>
+</body>
+</html>
