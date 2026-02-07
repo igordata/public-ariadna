@@ -29,7 +29,7 @@
             padding: 40px 24px 60px;
         }
 
-        .hero img {
+        .hero svg {
             width: 280px;
             max-width: 100%;
             margin-bottom: 32px;
@@ -211,7 +211,7 @@
                 padding: 60px 20px 40px;
             }
 
-            .hero img {
+            .hero svg {
                 width: 220px;
             }
 
@@ -233,7 +233,29 @@
 </head>
 <body>
     <section class="hero">
-        <img src="/media/Ariadna logo 3.svg" alt="Ariadna">
+        <svg xmlns="http://www.w3.org/2000/svg" width="960" height="580" viewBox="0 0 300 180" role="img" aria-label="Ariadna">
+          <style>
+            .graph { stroke:#C63A33; stroke-width:3.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+            .node  { fill:#C63A33; }
+            .ring  { fill:none; stroke:#C63A33; stroke-width:3.8; }
+            .word  { fill:#C63A33; font-family:'Avenir Next','Avenir',sans-serif;
+                     font-size:56px; font-weight:400; letter-spacing:-0.35px; }
+          </style>
+          <mask id="ring-cut">
+            <rect width="300" height="180" fill="#fff"/>
+            <circle cx="158.78" cy="70" r="6" fill="#000"/>
+          </mask>
+          <g mask="url(#ring-cut)">
+            <path class="graph" d="M122.5 104 L158.78 70 L210 118"/>
+            <path class="graph" d="M100 118 L115 90 L130 118"/>
+            <circle class="node" cx="100" cy="118" r="5.2"/>
+            <circle class="node" cx="115" cy="90"  r="5.2"/>
+            <circle class="node" cx="130" cy="118" r="5.2"/>
+            <circle class="node" cx="210" cy="118" r="5.2"/>
+          </g>
+          <circle class="ring" cx="158.78" cy="70" r="7"/>
+          <text class="word" x="150" y="159" text-anchor="middle">Ariadna</text>
+        </svg>
         <p class="tagline">Blockchain forensics and asset-tracing tools for police and law enforcement</p>
         <p class="vision-text">Our goal is to fuse all major blockchains into a massive single graph and cluster it without compromise. We'll need terabytes of RAM, tens of terabytes of SSD and minds eager to bend this power to their will.</p>
     </section>
