@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 250">
+  <style>
+    .graph { stroke:#C63A33; stroke-width:3.6; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .node  { fill:#C63A33; }
+    .ring  { fill:none; stroke:#C63A33; stroke-width:3.8; }
+    .word  { fill:#C63A33; font-family:'Avenir Next','Avenir',sans-serif;
+             font-size:56px; font-weight:400; letter-spacing:-0.35px; }
+  </style>
+
+  <!-- Mask trims the large-peak left leg under the hollow ring -->
+  <mask id="ring-cut">
+    <rect width="300" height="300" fill="#fff"/>
+    <!-- new summit center -->
+    <circle cx="158.78" cy="70" r="6" fill="#000"/>
+  </mask>
+
+  <g mask="url(#ring-cut)">
+    <!-- Large peak with equal angles to vertical; bases unchanged -->
+    <path class="graph" d="M122.5 104 L158.78 70 L210 118"/>
+
+    <!-- Small peak (unchanged) -->
+    <path class="graph" d="M100 118 L115 90 L130 118"/>
+
+    <!-- Nodes -->
+    <circle class="node" cx="100" cy="118" r="5.2"/>
+    <circle class="node" cx="115" cy="90"  r="5.2"/>
+    <circle class="node" cx="130" cy="118" r="5.2"/>
+    <circle class="node" cx="210" cy="118" r="5.2"/>
+  </g>
+
+  <!-- Hollow summit ring centered on new summit -->
+  <circle class="ring" cx="158.78" cy="70" r="7"/>
+
+  <!-- Wordmark -->
+  <text class="word" x="150" y="159" text-anchor="middle">Ariadna</text>
+</svg>
